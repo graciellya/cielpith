@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Blinds · ciel pith</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600&family=Jost:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="cursor" aria-hidden="true">
+      <svg viewBox="0 0 40 24" aria-hidden="true">
+        <path
+          d="M5 18
+             C3 18, 2 15, 3 12
+             C1 10, 3 7, 7 8
+             C8 4, 13 3, 16 6
+             C18 2, 23 2, 25 6
+             C29 4, 34 7, 33 11
+             C37 13, 36 17, 32 18
+             C29 21, 23 19, 18 18
+             C13 20, 8 19, 5 18 Z"
+        />
+      </svg>
+    </div>
+    <div class="paper" aria-hidden="true"></div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <nav class="side-nav" aria-label="Primary">
+          <a class="side-nav__link side-nav__link--back" href="../../index.html"
+            >← works</a
+          >
+          <a class="side-nav__link" href="#preview">preview</a>
+          <a class="side-nav__link" href="#notes">decisions</a>
+          <a class="side-nav__link" href="#outcome">outcome</a>
+        </nav>
+      </aside>
+
+      <div class="content">
+        <header class="site-header">
+          <a class="brand" href="../../index.html">
+            <img
+              class="brand-logo"
+              src="../../assets/logo.png"
+              alt="ciel pith, Clarity above. Essence within."
+            />
+          </a>
+        </header>
+
+        <main class="site-main">
+          <section class="block">
+            <header class="block-head block-head--row work-intro">
+              <div>
+                <p class="label">Work · 04</p>
+                <h1 class="work-title">Gradient Blinds</h1>
+              </div>
+              <p class="meta">Grey lavender · Cursor carousel</p>
+            </header>
+          </section>
+
+          <section class="block" id="preview">
+            <header class="block-head">
+              <p class="label">Preview</p>
+            </header>
+            <figure class="work-preview">
+              <video
+                src="../../assets/works/gradient-blinds.mov"
+                controls
+                playsinline
+                loop
+                muted
+                autoplay
+                poster="../../assets/works/gradient-blinds.png"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </section>
+
+          <section class="block" id="notes">
+            <header class="block-head block-head--row">
+              <p class="label">Design decisions</p>
+              <p class="meta">Rationale</p>
+            </header>
+            <div class="prose work-notes">
+              <p>Grey and lavender. No pure white or bright purple.</p>
+              <p>Vertical blinds rotate in a carousel.</p>
+              <p>Spotlight follows the cursor.</p>
+              <p>Palette, motion, and source listed under the demo.</p>
+            </div>
+          </section>
+
+          <section class="block" id="outcome">
+            <header class="block-head block-head--row">
+              <p class="label">Outcome</p>
+              <p class="meta">Result</p>
+            </header>
+            <div class="prose work-notes">
+              <p>Reused on dark product pages. No hero image needed.</p>
+              <p>Cursor effect kept people on the landing section longer.</p>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <p>© 2026 ciel pith</p>
+        </footer>
+      </div>
+    </div>
+    <script>
+      const cursor = document.querySelector(".cursor");
+      if (cursor) {
+        document.body.classList.add("has-custom-cursor");
+        window.addEventListener("mousemove", (event) => {
+          cursor.style.left = `${event.clientX}px`;
+          cursor.style.top = `${event.clientY}px`;
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography as architecture · ciel pith</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600&family=Jost:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="cursor" aria-hidden="true">
+      <svg viewBox="0 0 40 24" aria-hidden="true">
+        <path
+          d="M5 18
+             C3 18, 2 15, 3 12
+             C1 10, 3 7, 7 8
+             C8 4, 13 3, 16 6
+             C18 2, 23 2, 25 6
+             C29 4, 34 7, 33 11
+             C37 13, 36 17, 32 18
+             C29 21, 23 19, 18 18
+             C13 20, 8 19, 5 18 Z"
+        />
+      </svg>
+    </div>
+    <div class="paper" aria-hidden="true"></div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <nav class="side-nav" aria-label="Primary">
+          <a class="side-nav__link side-nav__link--back" href="../../index.html#journal"
+            >← journal</a
+          >
+          <a class="side-nav__link" href="#essay">essay</a>
+        </nav>
+      </aside>
+
+      <div class="content">
+        <header class="site-header">
+          <a class="brand" href="../../index.html">
+            <img
+              class="brand-logo"
+              src="../../assets/logo.png"
+              alt="ciel pith, Clarity above. Essence within."
+            />
+          </a>
+        </header>
+
+        <main class="site-main">
+          <section class="block">
+            <header class="block-head block-head--row work-intro">
+              <div>
+                <p class="label">Journal · 02</p>
+                <h1 class="work-title">Typography as architecture</h1>
+              </div>
+              <p class="meta">2026</p>
+            </header>
+          </section>
+
+          <section class="block" id="essay">
+            <header class="block-head">
+              <p class="label">Essay</p>
+            </header>
+            <div class="prose journal-prose">
+              <p>Serif for headlines. Sans for nav and labels. Size and spacing do the layout work.</p>
+              <p>Each typeface gets a job. Don't swap fonts for decoration.</p>
+              <p>When roles stay consistent, the site feels coherent instead of patched together.</p>
+              <p>Good type hierarchy should be obvious without explanation.</p>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <p>© 2026 ciel pith</p>
+        </footer>
+      </div>
+    </div>
+    <script>
+      const cursor = document.querySelector(".cursor");
+      if (cursor) {
+        document.body.classList.add("has-custom-cursor");
+        window.addEventListener("mousemove", (event) => {
+          cursor.style.left = `${event.clientX}px`;
+          cursor.style.top = `${event.clientY}px`;
+        });
+      }
+    </script>
+  </body>
+</html>

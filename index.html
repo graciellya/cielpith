@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ciel pith</title>
+    <meta
+      name="description"
+      content="ciel pith, Clarity above. Essence within."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600&family=Jost:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor" aria-hidden="true">
+      <svg viewBox="0 0 40 24" aria-hidden="true">
+        <path
+          d="M5 18
+             C3 18, 2 15, 3 12
+             C1 10, 3 7, 7 8
+             C8 4, 13 3, 16 6
+             C18 2, 23 2, 25 6
+             C29 4, 34 7, 33 11
+             C37 13, 36 17, 32 18
+             C29 21, 23 19, 18 18
+             C13 20, 8 19, 5 18 Z"
+        />
+      </svg>
+    </div>
+    <div class="paper" aria-hidden="true"></div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <nav class="side-nav" aria-label="Primary">
+          <a class="side-nav__link" href="#works">works</a>
+          <a class="side-nav__link" href="#about">about</a>
+          <a class="side-nav__link" href="#contact">contact</a>
+        </nav>
+      </aside>
+
+      <div class="content">
+        <header class="site-header">
+          <a class="brand" href="#">
+            <img
+              class="brand-logo"
+              src="assets/logo.png"
+              alt="ciel pith, Clarity above. Essence within."
+            />
+          </a>
+        </header>
+
+        <main class="site-main">
+      <section class="block block--feature" id="works">
+        <header class="block-head">
+          <p class="label">Featured</p>
+        </header>
+
+        <a class="feature" href="works/volume/">
+          <div class="feature__media">
+            <video
+              src="assets/works/volume.mov#t=2"
+              data-start="2"
+              preload="auto"
+              playsinline
+              loop
+              muted
+              autoplay
+              poster="assets/works/volume.png"
+            ></video>
+          </div>
+          <div class="feature__copy">
+            <h2 class="feature__title">Prism</h2>
+            <p class="meta">Italic serif · Gold glow</p>
+          </div>
+        </a>
+      </section>
+
+      <section class="block">
+        <header class="block-head block-head--row">
+          <p class="label">Index</p>
+          <p class="meta">Selected work</p>
+        </header>
+
+        <ol class="index">
+          <li class="index__item">
+            <a class="index__link" href="works/jordan-vale/">
+              <span class="index__num">01</span>
+              <span class="index__title">Eight Ball</span>
+              <span class="index__meta">Forest green · Condensed sans</span>
+            </a>
+          </li>
+          <li class="index__item">
+            <a class="index__link" href="works/nola-whitmore/">
+              <span class="index__num">02</span>
+              <span class="index__title">Collage</span>
+              <span class="index__meta">Cream sidebar · Red star</span>
+            </a>
+          </li>
+          <li class="index__item">
+            <a class="index__link" href="works/volume/">
+              <span class="index__num">03</span>
+              <span class="index__title">Prism</span>
+              <span class="index__meta">Italic serif · Gold glow</span>
+            </a>
+          </li>
+          <li class="index__item">
+            <a class="index__link" href="works/gradient-blinds/">
+              <span class="index__num">04</span>
+              <span class="index__title">Gradient Blinds</span>
+              <span class="index__meta">Grey lavender · Cursor carousel</span>
+            </a>
+          </li>
+          <li class="index__item">
+            <a class="index__link" href="works/orbit/">
+              <span class="index__num">05</span>
+              <span class="index__title">Orbit</span>
+              <span class="index__meta">Black · Concentric rings</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section class="block" id="about">
+        <header class="block-head">
+          <p class="label">About</p>
+        </header>
+
+        <div class="prose">
+          <p>
+            ciel + pith is a design studio that creates websites and digital
+            identities for artists, creative studios, and cultural institutions.
+          </p>
+          <p>
+            Drawing from architecture, editorial design, contemporary art, and
+            technology, we create digital experiences that feel considered,
+            enduring, and true to the work they represent.
+          </p>
+          <p>
+            Every project begins with careful observation before moving toward
+            form.
+          </p>
+        </div>
+      </section>
+
+      <section class="block block--contact" id="contact">
+        <header class="block-head">
+          <p class="label">Contact</p>
+        </header>
+
+        <a class="contact-link" href="mailto:cielpith@gmail.com">
+          cielpith@gmail.com
+        </a>
+      </section>
+        </main>
+
+        <footer class="site-footer">
+          <p>© 2026 ciel pith</p>
+        </footer>
+      </div>
+    </div>
+    <script src="assets/prism-video.js"></script>
+    <script>
+      const cursor = document.querySelector(".cursor");
+      if (cursor) {
+        document.body.classList.add("has-custom-cursor");
+        window.addEventListener("mousemove", (event) => {
+          cursor.style.left = `${event.clientX}px`;
+          cursor.style.top = `${event.clientY}px`;
+        });
+      }
+    </script>
+  </body>
+</html>
