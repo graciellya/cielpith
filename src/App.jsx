@@ -38,7 +38,7 @@ function About() {
   return (
     <section className="about" id="about" aria-label="About the studio">
       <Artwork className="art--strip" decorative />
-      <p>ciel + pith is a design studio that creates websites and digital<span className="desktop-break"><br /></span> identities for artists, creative studios, and cultural institutions.<span className="desktop-break"><br /></span> drawing from architecture, editorial design, contemporary art, and<span className="desktop-break"><br /></span> technology, we create digital experiences that feel considered,<span className="desktop-break"><br /></span> enduring, and true to the work they represent.</p>
+      <p>ciel pith is an independent design studio creating websites and digital identities for artists, creative studios, and cultural institutions.<br />working across architecture, editorial design, contemporary art, and technology, we build distinctive digital experiences that give form to ideas, articulate identity, and make the work behind them impossible to mistake.</p>
       <Artwork className="art--strip art--lower" decorative />
     </section>
   );
